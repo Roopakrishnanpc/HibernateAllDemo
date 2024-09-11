@@ -15,6 +15,7 @@ public class CustomerEntity {
 	@Id
 	private int id;
 	private String name;
+	//@OneToMany(mappedBy="customer", fetch=FetchType.LAZY)
 	@OneToMany(mappedBy="customer", fetch=FetchType.EAGER)
 	private Collection<BrandEntity> brand=new ArrayList<BrandEntity>();
 	
