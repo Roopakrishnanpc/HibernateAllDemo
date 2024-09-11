@@ -36,7 +36,7 @@ public class App
 	//secondLevelChacngDemo();
     //hqlDemo1adddata();
     	//hqlSelectDemo1();
-    	//hqlsqldemo();
+    	hqlsqldemo();
     	//statesDemo();
     	getloadDemo();
 }
@@ -190,6 +190,7 @@ private static void hqlSelectDemo1() {
     //System.out.println(h1111[0]+ " : " +h1111[1]+" : "+h1111[2]);
     for(Object[] hl:h1111)
     {
+    	//[0] because its already list of objects and we are trying to get ovject[] 0, 1 , 2
     	System.out.println(hl[0]+ " : " +hl[1]+" : "+hl[2]);
     }
     Query q11111=session.createQuery("select rollno, marks, stud_name from hql_entity h where h.marks>60");
